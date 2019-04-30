@@ -16,6 +16,7 @@ public protocol RangeSeekSliderDelegate: class {
     ///   - slider: RangeSeekSlider
     ///   - minValue: minimum value
     ///   - maxValue: maximum value
+    @objc
     func rangeSeekSlider(_ slider: RangeSeekSlider, didChange minValue: CGFloat, maxValue: CGFloat)
 
     /// Called when the user has started interacting with the RangeSeekSlider
