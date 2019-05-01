@@ -6,9 +6,11 @@
 //
 //
 
+import Foundation
 import CoreGraphics
 
-public protocol RangeSeekSliderDelegate: class {
+@objc
+public protocol RangeSeekSliderDelegate {
 
     /// Called when the RangeSeekSlider values are changed
     ///
@@ -16,8 +18,7 @@ public protocol RangeSeekSliderDelegate: class {
     ///   - slider: RangeSeekSlider
     ///   - minValue: minimum value
     ///   - maxValue: maximum value
-    @objc
-    func rangeSeekSlider(_ slider: RangeSeekSlider, didChange minValue: CGFloat, maxValue: CGFloat)
+    @objc optional func rangeSeekSlider(_ slider: RangeSeekSlider, didChange minValue: CGFloat, maxValue: CGFloat)
 
     /// Called when the user has started interacting with the RangeSeekSlider
     ///
@@ -43,6 +44,7 @@ public protocol RangeSeekSliderDelegate: class {
     ///   - slider: RangeSeekSlider
     ///   - maxValue: maximum value
     /// - Returns: String to be replaced
+    @objc
     func rangeSeekSlider(_ slider: RangeSeekSlider, stringForMaxValue: CGFloat) -> String?
 }
 
