@@ -10,7 +10,7 @@ import Foundation
 import CoreGraphics
 
 @objc
-public protocol RangeSeekSliderDelegate:class  {
+public protocol RangeSeekSliderDelegate {
 
     /// Called when the RangeSeekSlider values are changed
     ///
