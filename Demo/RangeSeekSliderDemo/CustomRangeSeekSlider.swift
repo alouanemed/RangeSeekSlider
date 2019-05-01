@@ -38,7 +38,8 @@ import UIKit
         numberFormatter.numberStyle = .currency
         labelsFixed = true
         initialColor = gray
- 
+        delegate = self
+
     }
 
     fileprivate func priceString(value: CGFloat) -> String {
@@ -55,3 +56,25 @@ import UIKit
     }
 }
 
+
+extension CustomRangeSeekSlider: RangeSeekSliderDelegate {
+    func didStartTouches(in slider: RangeSeekSlider) {
+        
+    }
+    
+    func rangeSeekSlider(_ slider: RangeSeekSlider, didChange minValue: CGFloat, maxValue: CGFloat) {
+        
+    }
+    
+    func didEndTouches(in slider: RangeSeekSlider) {
+        
+    }
+    
+    func rangeSeekSlider(_ slider: RangeSeekSlider, stringForMinValue minValue: CGFloat) -> String? {
+        return priceString(value: minValue)
+    }
+    
+    func rangeSeekSlider(_ slider: RangeSeekSlider, stringForMaxValue maxValue: CGFloat) -> String? {
+        return priceString(value: maxValue)
+    }
+}
